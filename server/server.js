@@ -48,10 +48,17 @@ const songListArray = [
 app.use(express.static('server/public'));
 
 app.get('/artist', (req, res) => {
+    console.log('Touchign down on artist')
     res.send(artistListArray);
 });
 
 // TODO - Add GET for songs
+
+app.get('/songs', (req, res) => {
+    console.log('Touchign down on artist')
+    res.send(songListArray);
+});
+
 
 app.listen(PORT, () => {
     console.log('listening on port', PORT)
